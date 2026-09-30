@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="t"><title id="t">GSK emblem</title>
+  <defs>
+    <mask id="cutg" maskUnits="userSpaceOnUse" x="0" y="0" width="130" height="120">
+      <rect width="130" height="120" fill="#fff"/><circle cx="60" cy="60" r="15.5" fill="#000"/>
+    </mask>
+    <clipPath id="kg"><rect x="200" y="7" width="76" height="106"/></clipPath>
+  </defs>
+  
+  <g fill="none" stroke="#0b0d0c" stroke-width="14"><g mask="url(#cutg)">
+      <path d="M92.52 27.48 A46 46 0 1 0 106 60"/><path d="M60 60 H113"/></g></g>
+  <circle cx="60" cy="60" r="10" fill="#ff6a00"/>
+  <path d="M100.3 19.7 L103.8 38.8 L84.7 35.3 Z" fill="#ff6a00"/></svg>

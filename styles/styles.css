@@ -1,0 +1,18 @@
+/* ==========================================================================
+   GSK Tour & Travels — MAIN STYLESHEET
+   Every HTML page links only this file. Each page has its own partial below.
+   Order matters: tokens → base → layout → shared components → page styles.
+   ========================================================================== */
+@import url('tokens.css');
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* Page-specific styles (one file per page / page family) */
+@import url('home.css');
+@import url('services.css');      /* services + service-detail + shared detail layout */
+@import url('tours.css');         /* tours + tour-detail */
+@import url('destinations.css');  /* destinations + destination-detail */
+@import url('about.css');
+@import url('contact.css');
+@import url('stories.css');       /* stories + story-detail */

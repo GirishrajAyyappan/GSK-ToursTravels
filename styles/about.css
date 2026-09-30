@@ -1,0 +1,29 @@
+/* About page */
+.about-hero { aspect-ratio: 21 / 9; overflow: hidden; border-radius: var(--r-sm); background: var(--green); min-height: 240px; }
+.about-hero img { width: 100%; height: 100%; object-fit: cover; }
+
+.story-grid { display: grid; gap: 2rem; }
+.story-grid h2 { margin-top: 1.25rem; max-width: 12ch; }
+.story-grid__text { display: grid; gap: 1.25rem; font-size: var(--fs-lg); color: #2d3430; max-width: 62ch; }
+.dropcap::first-letter { float: left; font: 500 5rem/.8 var(--font-display); padding: .4rem .7rem 0 0; color: var(--green); }
+@media (min-width: 900px) { .story-grid { grid-template-columns: 1fr 1.3fr; gap: 6rem; } }
+
+.mv__grid { display: grid; gap: 3rem; }
+.mv__text { font: 400 clamp(1.6rem, 2.6vw + .5rem, 2.6rem)/1.25 var(--font-display); letter-spacing: -.01em; margin-top: 1.25rem; max-width: 24ch; }
+@media (min-width: 900px) { .mv__grid { grid-template-columns: 1fr 1fr; gap: 6rem; } .mv__grid > div + div { border-left: 1px solid var(--line-light); padding-left: 4rem; } }
+
+.values { display: grid; border-top: 1.5px solid var(--ink); }
+.values li { padding: 1.75rem 0; border-bottom: 1px solid var(--line); display: grid; gap: .5rem; }
+.values li > span { font: italic 400 1.1rem var(--font-display); color: var(--green); }
+.values h3 { font-size: 1.5rem; } .values p { color: var(--muted); max-width: 38ch; }
+@media (min-width: 900px) { .values { grid-template-columns: repeat(4, 1fr); column-gap: 2rem; border-bottom: 0; } .values li { border-bottom: 0; border-top: 0; padding-top: 1.75rem; } }
+
+.team { display: grid; gap: 2rem 1.5rem; grid-template-columns: 1fr; }
+.team__member { display: grid; gap: .6rem; padding-top: 1.5rem; border-top: 1.5px solid var(--ink); align-content: start; }
+.team__avatar { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 50%; background: var(--green); color: var(--accent); font: 500 1.3rem var(--font-display); margin-bottom: .75rem; flex: none; }
+.team__member h3 { font-size: 1.25rem; } .team__member p { color: var(--muted); font-size: var(--fs-sm); }
+@media (min-width: 640px) { .team { grid-template-columns: repeat(2, 1fr); } } @media (min-width: 1000px) { .team { grid-template-columns: repeat(4, 1fr); } }
+
+.trust-why .feature-list { margin-top: 1rem; }
+.badges { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; }
+.badges li { padding: .6rem 1rem; border: 1px solid var(--ink); border-radius: var(--r-pill); font: 600 var(--fs-sm)/1 var(--font-body); }

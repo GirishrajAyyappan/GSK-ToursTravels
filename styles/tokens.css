@@ -1,0 +1,64 @@
+/* ==========================================================================
+   DESIGN TOKENS — GSK Tour & Travels
+   ---------------------------------------------------------------------------
+   RE-SKIN THE WHOLE SITE FROM HERE. Change the four --brand-* values and every
+   page updates. (Accent = fluorescent orange from the logo; Green = the
+   driver T-shirt colour; Ink = the black in the logo; Paper = warm background.)
+   ========================================================================== */
+:root {
+  /* ---- Brand palette (edit these) ---- */
+  --brand-ink:    #0b0d0c;   /* primary: near-black from the logo */
+  --brand-accent: #ff6a00;   /* fluorescent orange: CTAs, highlights on dark */
+  --brand-green:  #0f3d2e;   /* driver-uniform green: deep sections, emphasis on light */
+  --brand-paper:  #f6f3ec;   /* warm off-white page background */
+
+  /* ---- Derived colours ---- */
+  --ink:          var(--brand-ink);
+  --ink-soft:     #1c211f;
+  --accent:       var(--brand-accent);
+  --accent-hover: #ff8124;
+  --green:        var(--brand-green);
+  --green-soft:   #174f3d;
+  --paper:        var(--brand-paper);
+  --paper-2:      #ece7da;     /* tinted sections */
+  --white:        #ffffff;
+  --text:         #161a18;
+  --muted:        #565e59;     /* 6.1:1 on paper */
+  --muted-light:  #b9c2bc;     /* secondary text on dark */
+  --line:         rgba(11, 13, 12, .14);
+  --line-light:   rgba(246, 243, 236, .18);
+  --danger:       #b42318;
+  --success:      #12703f;
+
+  /* ---- Typography ---- */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-xs:   .78rem;
+  --fs-sm:   .9rem;
+  --fs-base: 1rem;
+  --fs-lg:   1.15rem;
+  --fs-xl:   clamp(1.25rem, 1vw + 1rem, 1.6rem);
+  --fs-h3:   clamp(1.2rem, .6vw + 1rem, 1.5rem);
+  --fs-h2:   clamp(2rem, 3.2vw + .8rem, 3.6rem);
+  --fs-h1:   clamp(2.5rem, 5.6vw + .6rem, 5.6rem);
+
+  /* ---- Spacing (8-pt based) ---- */
+  --s-1: .25rem; --s-2: .5rem;  --s-3: .75rem; --s-4: 1rem;   --s-5: 1.5rem;
+  --s-6: 2rem;   --s-7: 3rem;   --s-8: 4.5rem; --s-9: 6rem;
+  --section-y: clamp(4.5rem, 9vw, 9rem);
+  --gutter:    clamp(1.25rem, 4vw, 3rem);
+  --container: 1240px;
+
+  /* ---- Radius (kept small and deliberate) ---- */
+  --r-sm: 2px; --r-md: 4px; --r-lg: 8px; --r-pill: 999px;
+
+  /* ---- Shadows (used sparingly) ---- */
+  --shadow-1: 0 1px 2px rgba(11,13,12,.06), 0 6px 18px rgba(11,13,12,.06);
+  --shadow-2: 0 18px 50px rgba(11,13,12,.18);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --t-fast: .2s;
+  --t-med: .5s;
+  --header-h: 76px;
+}

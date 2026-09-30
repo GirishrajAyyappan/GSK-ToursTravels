@@ -1,0 +1,43 @@
+/* Contact / Get my quote */
+.contact-grid { display: grid; gap: 3rem; }
+.contact-form-wrap { min-width: 0; }
+#enquiry { display: grid; gap: 2.5rem; }
+#enquiry fieldset { display: grid; gap: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); }
+#enquiry legend { float: left; width: 100%; display: flex; align-items: center; gap: .8rem; padding: 0; margin-bottom: 1.25rem; font: 500 1.5rem/1 var(--font-display); }
+#enquiry legend + * { clear: both; }
+#enquiry legend span { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--accent); font: 600 .9rem var(--font-body); }
+.form-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+.form-grid .field--full { grid-column: 1 / -1; }
+#enquiry .form-grid fieldset.pill-group { background: transparent; border: 0; padding: 0; border-radius: 0; display: flex; gap: .5rem; }
+#enquiry .pill-group legend { float: none; display: block; width: 100%; font: 600 var(--fs-xs)/1.3 var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .4rem; }
+@media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+.form-foot { display: grid; gap: 1rem; }
+.form-foot p { color: var(--muted); font-size: var(--fs-sm); } .form-foot p i { color: var(--green); margin-right: .4rem; }
+@media (min-width: 640px) { .form-foot { grid-template-columns: auto 1fr; align-items: center; gap: 1.5rem; } }
+
+.form-success { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--success); border-radius: var(--r-md); padding: clamp(1.5rem, 4vw, 2.5rem); display: grid; gap: 1.1rem; }
+.form-success[hidden] { display: none; }
+.form-success > i { font-size: 2.5rem; color: var(--success); }
+.form-success p { color: var(--muted); }
+.form-success pre { white-space: pre-wrap; font: 400 var(--fs-sm)/1.6 var(--font-body); background: var(--paper-2); padding: 1rem 1.25rem; border-radius: var(--r-md); border-left: 3px solid var(--accent); color: var(--text); }
+
+.contact-side { display: grid; gap: 1.5rem; align-content: start; }
+.contact-card { background: var(--ink); color: var(--paper); padding: clamp(1.5rem, 3vw, 2.25rem); border-radius: var(--r-md); display: grid; gap: 1.5rem; }
+.contact-card h2 { font-size: 1.9rem; }
+.contact-card h3 { font: 600 var(--fs-xs)/1 var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-top: .5rem; }
+.contact-list { display: grid; gap: 1.1rem; }
+.contact-list li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
+.contact-list i { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border: 1px solid var(--line-light); border-radius: 50%; color: var(--accent); }
+.contact-list small { display: block; color: var(--muted-light); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .1em; }
+.contact-list a:hover { color: var(--accent); }
+.hours { display: grid; gap: .6rem; font-size: var(--fs-sm); margin-top: -.5rem; }
+.hours div { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--line-light); }
+.hours dd { color: var(--muted-light); text-align: right; }
+
+.map { position: relative; min-height: 220px; border-radius: var(--r-md); display: grid; place-items: center; align-content: center; gap: 1rem; overflow: hidden; background-color: #e5e1d3;
+  background-image: linear-gradient(rgba(15,61,46,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(15,61,46,.12) 1px, transparent 1px), linear-gradient(35deg, transparent 46%, rgba(255,106,0,.35) 47%, rgba(255,106,0,.35) 49%, transparent 50%);
+  background-size: 36px 36px, 36px 36px, 100% 100%; }
+.map__pin { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50% 50% 50% 0; rotate: -45deg; background: var(--accent); color: var(--ink); }
+.map__pin i { rotate: 45deg; font-size: 1.3rem; }
+
+@media (min-width: 1000px) { .contact-grid { grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start; } .contact-side { position: sticky; top: calc(var(--header-h) + 1.5rem); } }

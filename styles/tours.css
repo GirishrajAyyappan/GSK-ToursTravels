@@ -1,0 +1,31 @@
+/* Tours pages */
+.subnav { position: sticky; top: var(--header-h); z-index: 50; background: var(--paper); border-bottom: 1px solid var(--line); }
+.subnav ul { display: flex; gap: 1.75rem; overflow-x: auto; scrollbar-width: none; }
+.subnav ul::-webkit-scrollbar { display: none; }
+.subnav a { display: block; padding: 1rem 0; font: 500 var(--fs-sm)/1 var(--font-body); white-space: nowrap; border-bottom: 2px solid transparent; }
+.subnav a:hover { border-bottom-color: var(--accent); }
+
+.highlight-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.highlight-list li { display: grid; grid-template-columns: 3.5rem 1fr; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.1rem, 1.4vw, 1.35rem)/1.3 var(--font-display); }
+.highlight-list span { font: italic 400 1rem var(--font-display); color: var(--green); }
+
+.incl-grid { display: grid; gap: 2rem; }
+.incl-grid .mini-title { margin-top: 0; }
+@media (min-width: 720px) { .incl-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+
+.stay-table { font-size: var(--fs-sm); margin-bottom: 2rem; }
+.stay-table th, .stay-table td { padding: 1rem .75rem 1rem 0; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.stay-table thead th { font: 600 var(--fs-xs)/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-bottom: 1.5px solid var(--ink); }
+.stay-table tbody th { font: 500 1.05rem var(--font-display); }
+.transport { display: grid; grid-template-columns: 3rem 1fr; gap: 1.1rem; padding: 1.5rem; background: var(--paper-2); border-radius: var(--r-md); }
+.transport i { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--accent); }
+.transport h3 { font-size: 1.2rem; margin-bottom: .25rem; } .transport p { color: var(--muted); font-size: var(--fs-sm); }
+
+.custom-tour__inner { display: grid; gap: 1.5rem; align-items: center; }
+.custom-tour .section-header { margin: 0; }
+@media (min-width: 900px) { .custom-tour__inner { grid-template-columns: 1.6fr auto; gap: 4rem; } }
+
+.selected-pkg { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--green); color: var(--paper); border-radius: var(--r-md); margin-bottom: 1.75rem; }
+.selected-pkg i { color: var(--accent); font-size: 1.3rem; }
+.selected-pkg small { display: block; color: var(--muted-light); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .1em; }
+.selected-pkg a { margin-left: auto; font-weight: 600; border-bottom: 1.5px solid var(--accent); }

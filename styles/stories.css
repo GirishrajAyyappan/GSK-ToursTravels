@@ -1,0 +1,17 @@
+/* Travel stories + article */
+.story-grid-list { row-gap: 3rem; }
+
+.article-layout { display: grid; gap: 3rem; }
+.article { max-width: 720px; min-width: 0; }
+.article__lede { font: 400 clamp(1.3rem, 1.6vw + .7rem, 1.75rem)/1.45 var(--font-display); color: var(--ink); margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
+.article h2 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); margin: 2.5rem 0 1rem; }
+.article p { font-size: 1.12rem; line-height: 1.8; color: #2d3430; margin-bottom: 1.25rem; }
+.pullquote-inline { margin: 2.5rem 0; padding: .5rem 0 .5rem 1.75rem; border-left: 4px solid var(--accent); font: italic 400 clamp(1.4rem, 2vw + .6rem, 2rem)/1.3 var(--font-display); color: var(--green); }
+.article__author { display: flex; align-items: center; gap: 1rem; margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid var(--line); }
+.article__author .team__avatar { margin: 0; }
+.article__author span:not(.team__avatar) { display: block; color: var(--muted); font-size: var(--fs-sm); }
+.article-side { display: grid; gap: 1.25rem; align-content: start; }
+.side-card { padding: 1.75rem; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--white); display: grid; gap: .9rem; }
+.side-card h3 { font-size: 1.35rem; } .side-card p:not(.eyebrow) { color: var(--muted); font-size: var(--fs-sm); }
+.side-card--dark { background: var(--ink); color: var(--paper); border-color: var(--ink); } .side-card--dark .eyebrow { color: var(--accent); }
+@media (min-width: 1000px) { .article-layout { grid-template-columns: minmax(0, 1fr) 340px; gap: 6rem; justify-content: space-between; } .article-side { position: sticky; top: calc(var(--header-h) + 1.5rem); } }
