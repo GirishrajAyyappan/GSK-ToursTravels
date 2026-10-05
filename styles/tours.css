@@ -7,7 +7,7 @@
 
 .highlight-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
 .highlight-list li { display: grid; grid-template-columns: 3.5rem 1fr; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.1rem, 1.4vw, 1.35rem)/1.3 var(--font-display); }
-.highlight-list span { font: italic 400 1rem var(--font-display); color: var(--green); }
+.highlight-list span { font: 600 1rem var(--font-display); color: var(--green); }
 
 .incl-grid { display: grid; gap: 2rem; }
 .incl-grid .mini-title { margin-top: 0; }
@@ -29,3 +29,5 @@
 .selected-pkg i { color: var(--accent); font-size: 1.3rem; }
 .selected-pkg small { display: block; color: var(--muted-light); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .1em; }
 .selected-pkg a { margin-left: auto; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+
+@media (max-width: 520px) { .stay-table { display: block; overflow-x: auto; } .stay-table th, .stay-table td { padding-right: 1rem; } }

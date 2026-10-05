@@ -31,7 +31,7 @@
   --success:      #12703f;
 
   /* ---- Typography ---- */
-  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-display: 'Poppins', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --fs-xs:   .78rem;
   --fs-sm:   .9rem;
@@ -39,8 +39,8 @@
   --fs-lg:   1.15rem;
   --fs-xl:   clamp(1.25rem, 1vw + 1rem, 1.6rem);
   --fs-h3:   clamp(1.2rem, .6vw + 1rem, 1.5rem);
-  --fs-h2:   clamp(2rem, 3.2vw + .8rem, 3.6rem);
-  --fs-h1:   clamp(2.5rem, 5.6vw + .6rem, 5.6rem);
+  --fs-h2:   clamp(1.75rem, 2.4vw + .8rem, 2.8rem);
+  --fs-h1:   clamp(2.2rem, 4vw + .6rem, 4rem);
 
   /* ---- Spacing (8-pt based) ---- */
   --s-1: .25rem; --s-2: .5rem;  --s-3: .75rem; --s-4: 1rem;   --s-5: 1.5rem;
@@ -50,7 +50,7 @@
   --container: 1240px;
 
   /* ---- Radius (kept small and deliberate) ---- */
-  --r-sm: 2px; --r-md: 4px; --r-lg: 8px; --r-pill: 999px;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 20px; --r-pill: 999px;
 
   /* ---- Shadows (used sparingly) ---- */
   --shadow-1: 0 1px 2px rgba(11,13,12,.06), 0 6px 18px rgba(11,13,12,.06);

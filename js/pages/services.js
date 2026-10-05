@@ -11,15 +11,18 @@ GSK.pages.services = function () {
     ['My parents need regular hospital visits', 'senior-care-rides'],
     ['We’re planning a family or pilgrimage tour', 'tour-packages'],
     ['Our college is planning an industrial visit', 'student-tours'],
-    ['Our company needs daily employee transport', 'corporate-pickups']
+    ['Our company needs daily employee transport', 'corporate-pickups'],
+    ['Our hotel, mall or event needs valet parking', 'valet-parking'],
+    ['I need an airport pickup or drop', 'airport-transfers'],
+    ['I want to learn to drive', 'driving-class']
   ];
 
   app.innerHTML =
     GSK.pageHeader({
       crumbs: [{ label: 'Home', href: GSK.link('home') }, { label: 'Services' }],
       eyebrow: 'Services',
-      title: 'Six ways to get there, <em>well looked after.</em>',
-      lede: 'Every GSK service shares the same standard: a verified driver, a clear price and someone to call if plans change. Single trip or round trip — always.'
+      title: 'Everything on wheels, <em>well looked after.</em>',
+      lede: 'Every GSK service shares the same standard: a verified driver, a clear price and someone to call if plans change.'
     }) +
     '<section class="section section--tight"><div class="container svc-features">' +
       GSK.services.map(function (s, i) { return GSK.serviceFeature(s, i % 2 === 1); }).join('') +

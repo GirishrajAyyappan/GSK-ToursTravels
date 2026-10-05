@@ -38,10 +38,12 @@ GSK.config = {
 
 /* Per-page SEO. boot.js applies title / description / canonical / Open Graph. */
 GSK.seo = {
-  home:        { title: 'GSK Tour & Travels — Acting Drivers, Cabs & Tour Packages in South India',
-                 description: 'Verified acting drivers, premium cabs with drivers, senior hospital rides, corporate pickups and route-expert tour packages across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh and Telangana.' },
+  home:        { title: 'GSK Tour & Travels — Call Drivers, Cabs & Tour Packages in South India',
+                 description: 'Book verified call drivers for your own car, cabs with drivers, valet parking, airport transfers and tour packages across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh and Telangana.' },
   services:    { title: 'Our Services — Acting Drivers, Cabs, Senior Rides, Corporate | GSK Tour & Travels',
-                 description: 'Six ways to travel with GSK: hourly acting drivers, cab with driver, senior care rides, tour packages, student trips and corporate daily pickups.' },
+                 description: 'GSK services: acting drivers, cab with driver, senior care rides, tour packages, student trips, corporate pickups, valet parking, airport transfers and driving classes.' },
+  'call-drivers': { title: 'Call Drivers — Tariff for One Way, Round Trip & Outstation | GSK Tour & Travels',
+                 description: 'Call driver rates: one way, round trip from ₹550 for 4 hours, outstation same-day return ₹1,550 and outstation day hire ₹1,500 per day.' },
   service:     { title: 'Service | GSK Tour & Travels', description: 'Service details, pricing and how to book.' },
   tours:       { title: 'Tour Packages from Chennai, Kerala, Bangalore & Hyderabad | GSK Tour & Travels',
                  description: 'Chauffeur-driven tour packages with route-expert drivers, sightseeing, temples, hotels and meals — plus student industrial-visit packages.' },

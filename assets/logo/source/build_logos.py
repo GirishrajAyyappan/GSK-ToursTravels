@@ -80,14 +80,14 @@ def lockup(ink, accent, uid, services=False, sub=None):
         t2, w2 = text_path('ACTING DRIVERS', f700, 9.2, 0, 0, tracking=.9)
         isz = 0.95; iw = 24 * isz
         g1 = iw + 7 + w1; g2 = iw + 7 + w2
-        x1 = 7; x2 = 267 - g2
+        x2 = 7; x1 = 267 - g1   # Acting Drivers first (left), Tour Packages second (right)
         print('services widths', round(g1), round(g2), 'free gap', round(260 - g1 - g2))
         assert 260 - g1 - g2 > 14
         body += f'\n  <rect x="7" y="164" width="260" height="1" fill="{sub}" opacity=".35"/>'
         body += '\n  ' + icon_route(x1, y - 14, accent, isz) + f'<path transform="translate({x1+iw+7:.1f} {y+1.5})" d="{t1}" fill="{sub}"/>'
         body += '\n  ' + icon_wheel(x2, y - 14, accent, isz) + f'<path transform="translate({x2+iw+7:.1f} {y+1.5})" d="{t2}" fill="{sub}"/>'
         h = 198
-    return svg(W, h, body, 'GSK Tour & Travels' + (' — Tour Packages and Acting Drivers' if services else ''))
+    return svg(W, h, body, 'GSK Tour & Travels' + (' — Acting Drivers and Tour Packages' if services else ''))
 
 def write(name, content):
     with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f: f.write(content)

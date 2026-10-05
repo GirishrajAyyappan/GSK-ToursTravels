@@ -29,12 +29,12 @@
 
 .big-list { display: grid; gap: 0; border-top: 1px solid var(--line-light); }
 .big-list li { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; align-items: baseline; padding: 1.5rem 0; border-bottom: 1px solid var(--line-light); }
-.big-list span { font: italic 400 1.1rem var(--font-display); color: var(--accent); }
+.big-list span { font: 600 1.1rem var(--font-display); color: var(--accent); }
 .big-list strong { font: 500 clamp(1.5rem, 3.4vw, 3rem)/1.1 var(--font-display); letter-spacing: -.02em; transition: color .3s, padding .4s var(--ease); }
 .big-list li:hover strong { color: var(--accent); padding-left: .5rem; }
 
 .driver-note__grid { display: grid; gap: 3rem; }
-.pullquote blockquote { font: italic 400 clamp(1.6rem, 2.6vw + .5rem, 2.6rem)/1.25 var(--font-display); letter-spacing: -.01em; }
+.pullquote blockquote { font: 600 clamp(1.6rem, 2.6vw + .5rem, 2.6rem)/1.25 var(--font-display); letter-spacing: -.01em; }
 .pullquote figcaption { margin-top: 1.25rem; font: 600 var(--fs-xs) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
 .info-list { border-top: 1.5px solid var(--ink); }
 .info-list div { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }

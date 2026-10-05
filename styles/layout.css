@@ -30,12 +30,14 @@
 .menu-toggle[aria-expanded="true"] span:first-child { top: 22px; transform: rotate(45deg); }
 .menu-toggle[aria-expanded="true"] span:last-child { top: 22px; transform: rotate(-45deg); }
 
-@media (min-width: 1180px) { .header-phone { display: inline-flex; } }
-@media (max-width: 960px) {
+@media (min-width: 1400px) { .header-phone { display: inline-flex; } }
+@media (max-width: 1100px) {
   .primary-nav, .header-cta { display: none; }
   .menu-toggle { display: block; }
-  body.menu-open .site-header { background: var(--ink); color: var(--paper); border-color: transparent; box-shadow: none; }
 }
+/* open menu: header must go dark whatever its scroll/overlay state (specificity beats .is-scrolled) */
+body.menu-open .site-header, body.menu-open .site-header.is-scrolled, body.menu-open .site-header.is-overlay, body.menu-open .site-header.is-overlay.is-scrolled { background: var(--ink); color: var(--paper); border-color: transparent; box-shadow: none; }
+body.menu-open .site-header .logo__img--ink { display: none; } body.menu-open .site-header .logo__img--paper { display: block; }
 
 /* ---- Mobile menu ---- */
 .mobile-menu { position: fixed; inset: 0; z-index: 90; background: var(--ink); color: var(--paper); padding: calc(var(--header-h) + 1.5rem) var(--gutter) 2rem; overflow-y: auto; visibility: hidden; opacity: 0; transition: opacity .35s, visibility .35s; }
@@ -44,17 +46,17 @@
 .mobile-menu ul { display: flex; flex-direction: column; }
 .mobile-menu li { border-bottom: 1px solid var(--line-light); transform: translateY(14px); opacity: 0; transition: transform .5s var(--ease), opacity .5s; transition-delay: calc(var(--i) * 50ms + 100ms); }
 .mobile-menu.open li { transform: none; opacity: 1; }
-.mobile-menu li a { display: block; font: 500 clamp(1.7rem, 7vw, 2.4rem)/1 var(--font-display); padding: 1rem 0; }
+.mobile-menu li a { display: block; font: 600 clamp(1.3rem, 5vw, 1.8rem)/1.1 var(--font-display); padding: .9rem 0; }
 .mobile-menu li a:hover { color: var(--accent); }
 .mobile-menu__foot { margin-top: auto; display: grid; gap: .75rem; }
 .mobile-menu__foot p { color: var(--muted-light); font-size: var(--fs-sm); text-align: center; margin-top: .5rem; }
-@media (min-width: 961px) { .mobile-menu { display: none; } }
+@media (min-width: 1101px) { .mobile-menu { display: none; } }
 
 /* ---- Footer ---- */
 .site-footer { background: var(--ink); color: var(--paper); padding-top: clamp(3.5rem, 7vw, 6rem); }
 .site-footer a:hover { color: var(--accent); }
 .footer-top { display: grid; gap: 2.5rem; grid-template-columns: 1fr; padding-bottom: 3rem; }
-.footer-brand__line { font: italic 400 clamp(1.4rem, 2.6vw, 1.9rem)/1.15 var(--font-display); margin: 1.75rem 0 .75rem; max-width: 14ch; }
+.footer-brand__line { font: 600 clamp(1.4rem, 2.6vw, 1.9rem)/1.15 var(--font-display); margin: 1.75rem 0 .75rem; max-width: 14ch; }
 .footer-brand__sub { color: var(--muted-light); max-width: 34ch; font-size: var(--fs-sm); }
 .footer-col h2 { font: 600 var(--fs-xs)/1 var(--font-body); text-transform: uppercase; letter-spacing: .16em; color: var(--accent); margin-bottom: 1.1rem; }
 .footer-col li { margin-bottom: .55rem; }
@@ -64,20 +66,29 @@
 .social { display: flex; gap: .6rem; margin-top: 1rem; }
 .social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line-light); border-radius: 50%; opacity: 1 !important; transition: all var(--t-fast); }
 .social a:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
-.newsletter { display: grid; gap: 1.25rem; padding-block: 2.5rem; border-block: 1px solid var(--line-light); align-items: center; }
-.newsletter h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
-.newsletter p { color: var(--muted-light); font-size: var(--fs-sm); margin-top: .35rem; }
-.newsletter__field { display: flex; gap: .5rem; flex-wrap: wrap; }
-.newsletter__field input { flex: 1 1 220px; min-height: 52px; padding: .8rem 1rem; background: transparent; border: 1px solid rgba(246,243,236,.4); border-radius: var(--r-md); color: var(--paper); }
-.newsletter__field input::placeholder { color: var(--muted-light); }
-.newsletter__field input:focus { outline: 3px solid var(--accent); border-color: transparent; box-shadow: none; }
-.newsletter__msg { min-height: 1.2em; font-size: var(--fs-sm); }
-.newsletter__msg.is-ok { color: #7be0a8 !important; } .newsletter__msg.is-error { color: #ffb4a8 !important; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; padding-block: 1.5rem 7rem; color: var(--muted-light); font-size: var(--fs-xs); }
-@media (min-width: 720px) { .footer-top { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; } .newsletter { grid-template-columns: 1fr 1fr; } .footer-bottom { padding-bottom: 2rem; } }
-
+@media (min-width: 720px) { .footer-top { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; } .footer-bottom { padding-bottom: 2rem; } }
 /* ---- Floating WhatsApp ---- */
 .wa-float { position: fixed; right: 1rem; bottom: 1rem; z-index: 80; display: inline-flex; align-items: center; gap: .55rem; background: #25d366; color: #06230f; font-weight: 700; font-size: .9rem; padding: .85rem 1.15rem; border-radius: var(--r-pill); box-shadow: 0 10px 30px rgba(0,0,0,.25); transition: transform .25s var(--ease); }
 .wa-float i { font-size: 1.4rem; }
 .wa-float:hover { transform: translateY(-3px); }
 @media (max-width: 520px) { .wa-float span { display: none; } .wa-float { padding: .9rem; } }
+
+/* ---- Header logo sub-line: Acting Drivers first, then Tour Packages ---- */
+.site-header .logo { flex-direction: column; align-items: flex-start; gap: 3px; }
+.logo__services { display: flex; align-items: center; gap: .9rem; font: 700 .62rem/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.logo__services > span { display: inline-flex; align-items: center; gap: .3rem; opacity: .9; }
+.logo__services svg { color: var(--accent); flex: none; }
+@media (max-width: 340px) { .logo__services { display: none; } }
+
+/* ---- Header fit: nav never wraps; phone only when there is room ---- */
+.primary-nav a { white-space: nowrap; }
+.primary-nav ul { gap: clamp(.9rem, 1.5vw, 2rem); }
+.site-header__inner { gap: 1rem; }
+.site-header .logo { min-width: 0; }
+@media (min-width: 1101px) and (max-width: 1399px) { .header-phone { display: none; } }
+@media (min-width: 1400px) { .header-phone { display: inline-flex; } }
+@media (max-width: 520px) {
+  .logo__services { gap: .55rem; font-size: .52rem; letter-spacing: .06em; }
+  .logo__services svg { width: 11px; height: 11px; }
+}

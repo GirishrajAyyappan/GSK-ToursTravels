@@ -157,6 +157,84 @@ GSK.services = [
       ['Go live', 'Dedicated drivers and a point of contact for your admin.']
     ],
     faqIds: ['f-corp-contract', 'f-corp-backup', 'f-vehicle', 'f-advance']
+  },
+  {
+    id: 'valet-parking',
+    no: '07',
+    title: 'Valet Parking',
+    short: 'Trained valet teams for hotels, malls, weddings and events — and for private homes and gatherings.',
+    tagline: 'Arrive. Step out. We park.',
+    icon: 'fa-square-parking',
+    image: 'hotel',
+    tripTypes: ['Event', 'Daily contract'],
+    priceFrom: 'Custom', priceUnit: 'per event or contract', priceNote: 'B2B: priced per site, shift and headcount. B2C: priced per event and number of cars.',
+    overview: 'Whether it is a hotel porch, a restaurant, a mall, a corporate event or a family wedding at home, our uniformed valet staff handle arrival, parking and return with care. Businesses (B2B) get dependable daily or event teams; individuals (B2C) get a smooth guest experience for functions and parties.',
+    who: ['Hotels, restaurants, malls and hospitals (B2B)', 'Corporate events and conferences (B2B)', 'Weddings, receptions and house functions (B2C)', 'Residential communities hosting gatherings (B2C)'],
+    features: [
+      ['fa-user-tie', 'Uniformed, trained staff', 'Verified valets trained in careful car handling and guest etiquette.'],
+      ['fa-ticket', 'Token and key control', 'Numbered tokens, key boxes and a handover log for every car.'],
+      ['fa-shield-halved', 'Insured handling', 'Careful parking, photo check-in on request and clear responsibility.'],
+      ['fa-people-group', 'Scales to your crowd', 'From 2 valets at a house function to full teams for large events.']
+    ],
+    steps: [
+      ['Share the venue', 'Location, date, timings and expected number of cars.'],
+      ['Get a proposal', 'Team size, pricing and parking plan on WhatsApp.'],
+      ['Site check', 'For larger events we visit and plan the flow beforehand.'],
+      ['Event day', 'A supervisor and valet team on site, on time.']
+    ],
+    faqIds: ['f-corp-contract', 'f-corp-backup', 'f-advance', 'f-cancel']
+  },
+  {
+    id: 'airport-transfers',
+    no: '08',
+    title: 'Airport Pickup & Drop',
+    short: 'On-time airport transfers with flight tracking, luggage help and a fixed fare.',
+    tagline: 'Never miss a flight. Never wait at arrivals.',
+    icon: 'fa-plane-departure',
+    image: 'traveller',
+    tripTypes: ['Pickup', 'Drop', 'Round trip'],
+    priceFrom: 'Custom', priceUnit: 'fixed fare by route', priceNote: 'Fixed fare by pickup area and vehicle. Waiting charges listed upfront.',
+    overview: 'Early flights, late landings, heavy luggage — we make the airport run simple. Your driver tracks the flight, waits at arrivals with a name board and gets you to your door, or gets you to the terminal with time to spare.',
+    who: ['Families and seniors with luggage', 'Business travellers on tight schedules', 'Early-morning and late-night flights', 'Visitors arriving in a new city'],
+    features: [
+      ['fa-plane-arrival', 'Flight tracking', 'Pick-ups adjust automatically if your flight is early or late.'],
+      ['fa-suitcase-rolling', 'Luggage help', 'Sedans, SUVs and MPVs sized for your bags and group.'],
+      ['fa-indian-rupee-sign', 'Fixed fare', 'The fare is agreed upfront. No surge at midnight.'],
+      ['fa-clock', 'Always early', 'Driver reaches 10 minutes before your pick-up time.']
+    ],
+    steps: [
+      ['Share flight and address', 'Flight number, terminal and your pickup or drop address.'],
+      ['Get a fixed fare', 'Confirmed on WhatsApp with driver details.'],
+      ['Meet your driver', 'Name board at arrivals, or at your door for drops.'],
+      ['Travel at ease', 'Direct, comfortable, on time.']
+    ],
+    faqIds: ['f-tolls', 'f-vehicle', 'f-advance', 'f-cancel']
+  },
+  {
+    id: 'driving-class',
+    no: '09',
+    title: 'Driving Class for Beginners',
+    short: 'Patient one-to-one car driving lessons, on your car or ours.',
+    tagline: 'Learn to drive without the fear.',
+    icon: 'fa-chalkboard-user',
+    image: 'cab',
+    tripTypes: ['Beginner', 'Refresher'],
+    priceFrom: 'Custom', priceUnit: 'per course', priceNote: 'Course fee depends on number of sessions and whether you use your car or ours.',
+    overview: 'Nervous about city traffic? Our experienced instructors teach from the very basics — controls, clutch and gears, parking, turns and traffic sense — one-to-one at a pace that suits you, in manual or automatic cars.',
+    who: ['First-time learners and adults who never learned', 'Licence holders who have lost confidence', 'Women and seniors who prefer a patient instructor', 'Families who want a trained instructor for a new car'],
+    features: [
+      ['fa-user-graduate', 'Experienced instructors', 'Patient, polite instructors with years of driving experience.'],
+      ['fa-car-side', 'Manual or automatic', 'Learn in our dual-control car or in your own.'],
+      ['fa-road', 'Real-road practice', 'Start in quiet areas and move to city traffic when ready.'],
+      ['fa-id-card', 'Licence guidance', 'Help with learner’s licence and test preparation.']
+    ],
+    steps: [
+      ['Tell us your level', 'Complete beginner or just need a confidence boost.'],
+      ['Pick a schedule', 'Morning, evening or weekend slots.'],
+      ['Start with basics', 'Controls, clutch, steering and parking in a safe area.'],
+      ['Hit the road', 'Gradual city and highway practice with your instructor.']
+    ],
+    faqIds: ['f-advance', 'f-cancel', 'f-vehicle', 'f-hours']
   }
 ];
 

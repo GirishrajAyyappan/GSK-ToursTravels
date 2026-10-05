@@ -12,9 +12,9 @@
   var files = [
     'config.js',
     'data/images.js', 'data/services.js', 'data/tours.js', 'data/destinations.js',
-    'data/testimonials.js', 'data/stories.js', 'data/faqs.js',
+    'data/testimonials.js', 'data/stories.js', 'data/faqs.js', 'data/tariffs.js',
     'lib/utils.js',
-    'components/layout.js', 'components/cards.js', 'components/widgets.js',
+    'components/layout.js', 'components/cards.js', 'components/widgets.js', 'components/booking.js', 'components/select.js',
     'pages/' + page + '.js'
   ];
 
@@ -25,9 +25,18 @@
     GSK.renderLayout();
     var ctrl = GSK.pages && GSK.pages[page];
     if (ctrl) ctrl();
+    GSK.enhanceSelects(document);
     GSK.initReveal(document);
     GSK.initCounters(document);
     document.documentElement.classList.add('ready');
+    /* Deep links (e.g. services.html#valet-parking): content is rendered by JS, so the browser's
+       own hash scroll has nothing to land on. Scroll once rendered, and again after images load. */
+    var hash = decodeURIComponent(location.hash.slice(1));
+    if (hash) {
+      var go = function () { var el = document.getElementById(hash); if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+      go(); requestAnimationFrame(go); setTimeout(go, 500);
+      window.addEventListener('load', function () { setTimeout(go, 100); });
+    }
   }
 
   function load(i) {

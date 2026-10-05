@@ -17,6 +17,12 @@ GSK.pages.about = function () {
     ['DT', 'Driver Training Lead', 'Runs onboarding, road assessments and annual refreshers for every chauffeur.'],
     ['CC', 'Customer Care Lead', 'Leads the team that picks up at 6 am and stays on the line until you’re home.']
   ];
+  var usp = [
+    ['fa-handshake-angle', 'Our drivers are well trained to be polite and customer friendly.'],
+    ['fa-map-location-dot', 'Drivers know every nook and corner of the routes assigned to them.'],
+    ['fa-ban', 'Our drivers stay completely away from drugs and alcohol, and say no to them while driving.'],
+    ['fa-award', 'Our drivers bring about 10 to 15 years of driving experience.']
+  ];
   var trust = [
     ['fa-id-badge', 'Verified chauffeurs', 'ID, licence, address and background checks before anyone drives for us.'],
     ['fa-car-on', 'Well-kept vehicles', 'Commercial-permit, insured and serviced vehicles, cleaned before every trip.'],
@@ -32,13 +38,20 @@ GSK.pages.about = function () {
       lede: 'GSK Tour & Travels began as a simple idea: people deserve a driver they can trust, at a price they understand, on roads the driver actually knows.'
     }) +
 
-    '<section class="section section--tight"><div class="container about-hero reveal">' + GSK.img('road', { w: 1800, alt: 'An open highway in South India', sizes: '100vw' }) + '</div></section>' +
+    '<section class="section section--tight"><div class="container about-hero reveal">' + GSK.img('hero', { w: 1800, alt: 'A GSK driver at the wheel of a car at dusk', sizes: '100vw' }) + '</div></section>' +
+
+    '<section class="section section--tint usp"><div class="container usp__grid">' +
+      '<div class="usp__media reveal">' + GSK.img('cab', { w: 900, alt: 'A clean GSK car ready for the road', sizes: '(max-width: 900px) 100vw, 45vw' }) + '</div>' +
+      '<div class="usp__copy">' + GSK.sectionHeader({ eyebrow: 'Why choose GSK drivers', title: 'Drivers you can <em>count on.</em>' }) +
+        '<ul class="usp__list">' + usp.map(function (u) {
+          return '<li class="reveal"><span class="usp__icon" aria-hidden="true"><i class="fa-solid ' + u[0] + '"></i></span><p>' + u[1] + '</p></li>'; }).join('') + '</ul></div>' +
+    '</div></section>' +
 
     '<section class="section"><div class="container story-grid">' +
       '<div class="reveal"><p class="eyebrow">Our story</p><h2>Built around the people behind the wheel.</h2></div>' +
       '<div class="story-grid__text reveal">' +
         '<p class="dropcap">Every long road has a driver nobody thanks. The one who leaves at 4 am, knows which dhaba is clean and which ghat turns to avoid after dark. We built GSK around those people.</p>' +
-        '<p>What began as car-and-driver hire has grown into six services: acting drivers for people who own their cars, cabs for people who don’t, steady rides for elderly parents, tours that span states, school trips and daily corporate pickups.</p>' +
+        '<p>What began as car-and-driver hire has grown into a full set of services: acting drivers for people who own their cars, cabs for people who don’t, steady rides for elderly parents, tours that span states, school trips, corporate pickups, valet parking, airport transfers and driving classes.</p>' +
         '<p>The promise is the same across all of them. A verified driver. A price that doesn’t move. A human being at the other end of the phone. Premium, to us, means nothing more or less than being looked after.</p>' +
       '</div></div></section>' +
 

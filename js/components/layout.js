@@ -3,6 +3,7 @@ window.GSK = window.GSK || {};
 
 GSK.nav = [
   { page: 'services',     label: 'Services',       match: ['services', 'service'] },
+  { page: 'call-drivers', label: 'Call Drivers',    match: ['call-drivers'] },
   { page: 'tours',        label: 'Tour Packages',  match: ['tours', 'tour'] },
   { page: 'destinations', label: 'Destinations',   match: ['destinations', 'destination'] },
   { page: 'about',        label: 'About',          match: ['about'] },
@@ -10,19 +11,23 @@ GSK.nav = [
   { page: 'contact',      label: 'Contact',        match: ['contact'] }
 ];
 
+/* Same icons as the footer logo lockup */
+GSK.icoRoute = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.4-6.5-10.3a6.5 6.5 0 0 1 13 0C18.5 15.6 12 21 12 21z"/><circle cx="12" cy="10.7" r="2.3"/><path d="M3 21.5h4M17 21.5h4" stroke-dasharray="0.1 3.2"/></svg>';
+GSK.icoWheel = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="2.2"/><path d="M2.6 11.2l7.3.4M21.4 11.2l-7.3.4M12 14.3V21.5"/></svg>';
 GSK.logoSrc = function (name) { return GSK.root + 'assets/logo/' + name + '.svg'; };
 
 /* Header logo: light + dark artwork, CSS swaps them (dark artwork on transparent/dark headers). */
 GSK.logo = function () {
   return '<a class="logo" href="' + GSK.link('home') + '" aria-label="' + GSK.esc(GSK.config.brand) + ' — home">' +
     '<img class="logo__img logo__img--ink" src="' + GSK.logoSrc('logo-horizontal') + '" alt="' + GSK.esc(GSK.config.brand) + '" width="470" height="120">' +
-    '<img class="logo__img logo__img--paper" src="' + GSK.logoSrc('logo-horizontal-dark') + '" alt="" aria-hidden="true" width="470" height="120"></a>';
+    '<img class="logo__img logo__img--paper" src="' + GSK.logoSrc('logo-horizontal-dark') + '" alt="" aria-hidden="true" width="470" height="120">' +
+    '<span class="logo__services"><span>' + GSK.icoWheel + 'Acting Drivers</span><span>' + GSK.icoRoute + 'Tour Packages</span></span></a>';
 };
 
 /* Footer logo: stacked lockup with the two signature services underneath. */
 GSK.logoFull = function () {
   return '<a class="logo logo--full" href="' + GSK.link('home') + '" aria-label="' + GSK.esc(GSK.config.brand) + ' — home">' +
-    '<img src="' + GSK.logoSrc('logo-full-dark') + '" alt="' + GSK.esc(GSK.config.brand) + ' — Tour Packages and Acting Drivers" width="274" height="198"></a>';
+    '<img src="' + GSK.logoSrc('logo-full-dark') + '" alt="' + GSK.esc(GSK.config.brand) + ' — Acting Drivers and Tour Packages" width="274" height="198"></a>';
 };
 
 GSK.renderLayout = function () {
@@ -105,18 +110,9 @@ GSK.renderLayout = function () {
           '<a href="' + GSK.waLink() + '" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a></div>' +
         '</div>' +
       '</div>' +
-      '<form class="newsletter" novalidate>' +
-        '<div><h2>Road notes, monthly.</h2><p>Route guides and seasonal offers. No spam, one email a month.</p></div>' +
-        '<div class="newsletter__field"><label class="sr-only" for="nl-email">Email address</label>' +
-          '<input id="nl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>' +
-          '<button class="btn btn--accent" type="submit">Subscribe</button></div>' +
-        '<p class="newsletter__msg" role="status" aria-live="polite"></p>' +
-      '</form>' +
       '<div class="footer-bottom"><p>© ' + new Date().getFullYear() + ' ' + cfg.brand + '. All rights reserved.</p>' +
       '<p>Serving ' + cfg.markets.join(' · ') + '</p></div>' +
     '</div>';
-
-  GSK.bindNewsletter(GSK.$('.newsletter', f));
 
   /* ---- Floating WhatsApp ---- */
   var wa = document.createElement('a');
@@ -128,24 +124,3 @@ GSK.renderLayout = function () {
   document.body.appendChild(wa);
 };
 
-GSK.bindNewsletter = function (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var input = form.elements.email, msg = GSK.$('.newsletter__msg', form);
-    if (!/^\S+@\S+\.\S+$/.test(input.value)) {
-      msg.textContent = 'Please enter a valid email address.';
-      msg.className = 'newsletter__msg is-error';
-      input.focus();
-      return;
-    }
-    var subs = JSON.parse(localStorage.getItem('gsk_newsletter') || '[]');
-    subs.push({ email: input.value, at: new Date().toISOString() });
-    localStorage.setItem('gsk_newsletter', JSON.stringify(subs));
-    if (GSK.config.api.newsletterEndpoint) {
-      fetch(GSK.config.api.newsletterEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: input.value }) }).catch(function () {});
-    }
-    msg.textContent = 'Thank you — you’re on the list.';
-    msg.className = 'newsletter__msg is-ok';
-    form.reset();
-  });
-};

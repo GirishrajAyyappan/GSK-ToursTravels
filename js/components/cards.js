@@ -57,17 +57,22 @@ GSK.statBlock = function (s) {
 };
 
 /* ---- Services ---------------------------------------------------------- */
-GSK.serviceRow = function (s) {
-  return '<a class="svc-row reveal" href="' + GSK.link('service', { id: s.id }) + '">' +
-    '<span class="svc-row__no">' + s.no + '</span>' +
-    '<span class="svc-row__main"><h3>' + s.title + '</h3><p>' + s.short + '</p></span>' +
-    '<span class="svc-row__meta"><span>' + s.tripTypes.join(' · ') + '</span><strong>from ' + s.priceFrom + ' <small>' + s.priceUnit + '</small></strong></span>' +
-    '<span class="svc-row__thumb" aria-hidden="true">' + GSK.img(s.image, { w: 520, alt: '', sizes: '260px' }) + '</span>' +
-    '<span class="svc-row__go" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>';
+/* Home-page service card: image on top, text below, Contact us (WhatsApp) + Explore (services page section). */
+GSK.serviceCard = function (s) {
+  var wa = GSK.waLink('Hello GSK Tour & Travels, I am interested in: ' + s.title + '. Please contact me.');
+  return '<article class="svc-card" id="card-' + s.id + '">' +
+    '<div class="svc-card__media">' + GSK.img(s.image, { w: 640, alt: s.title + ' — GSK Tour & Travels', sizes: '(max-width: 720px) 80vw, 320px' }) +
+      '<span class="svc-card__icon" aria-hidden="true"><i class="fa-solid ' + s.icon + '"></i></span></div>' +
+    '<div class="svc-card__body"><h3>' + s.title + '</h3><p>' + s.short + '</p>' +
+      '<div class="svc-card__actions">' +
+        '<a class="btn btn--accent btn--sm" href="' + wa + '" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Contact us</a>' +
+        '<a class="btn btn--outline-dark btn--sm" href="' + GSK.link('services') + '#' + s.id + '">Explore</a>' +
+      '</div></div></article>';
 };
 
 GSK.serviceFeature = function (s, flip) {
-  return '<article class="svc-feature' + (flip ? ' is-flip' : '') + ' reveal">' +
+  var wa = GSK.waLink('Hello GSK Tour & Travels, I am interested in: ' + s.title + '. Please contact me.');
+  return '<article class="svc-feature' + (flip ? ' is-flip' : '') + ' reveal" id="' + s.id + '">' +
     '<div class="svc-feature__media">' + GSK.img(s.image, { w: 1000, alt: s.title + ' — GSK Tour & Travels' }) + '<span class="svc-feature__no">' + s.no + '</span></div>' +
     '<div class="svc-feature__body">' +
       '<p class="eyebrow"><i class="fa-solid ' + s.icon + '" aria-hidden="true"></i> ' + s.tripTypes.join(' · ') + '</p>' +
@@ -75,7 +80,8 @@ GSK.serviceFeature = function (s, flip) {
       '<p>' + s.overview + '</p>' +
       '<ul class="tick-list">' + s.who.slice(0, 3).map(function (w) { return '<li>' + w + '</li>'; }).join('') + '</ul>' +
       '<div class="svc-feature__foot"><p class="price-tag"><small>from</small> ' + s.priceFrom + ' <small>' + s.priceUnit + '</small></p>' +
-      '<a class="btn btn--dark" href="' + GSK.link('service', { id: s.id }) + '">Explore ' + s.title.split(' ')[0] + ' <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>' +
+      '<div class="svc-feature__btns"><a class="btn btn--accent" href="' + wa + '" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Contact us</a>' +
+      '<a class="btn btn--outline-dark" href="' + GSK.link('service', { id: s.id }) + '">Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>' +
     '</div></article>';
 };
 

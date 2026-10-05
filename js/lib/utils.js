@@ -15,7 +15,7 @@ GSK.esc = function (s) {
 /* ---- Routing ----------------------------------------------------------- */
 GSK.root = document.body.getAttribute('data-root') || '';           // '' on index, '../' in /views
 GSK.pageFiles = {
-  home: 'index.html', services: 'views/services.html', service: 'views/service-detail.html',
+  home: 'index.html', services: 'views/services.html', 'call-drivers': 'views/call-drivers.html', service: 'views/service-detail.html',
   tours: 'views/tours.html', tour: 'views/tour-detail.html', destinations: 'views/destinations.html',
   destination: 'views/destination-detail.html', about: 'views/about.html', contact: 'views/contact.html',
   stories: 'views/stories.html', story: 'views/story-detail.html'

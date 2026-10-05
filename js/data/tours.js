@@ -4,6 +4,69 @@ window.GSK = window.GSK || {};
 /* stop kinds: temple | sight | food | stay | drive */
 GSK.tours = [
   {
+    id: 'aarupadai-veedu-tour',
+    title: 'Aarupadai Veedu Devotional Tour',
+    from: 'Chennai', to: 'Six Murugan abodes', regionFilter: 'Tamil Nadu', priority: 1,
+    days: 4, nights: 3, type: 'Temple & heritage', audience: ['Family', 'Pilgrim', 'Senior'], tier: 'Comfort',
+    price: 18900, priceUnit: 'per vehicle (sedan)', featured: true,
+    image: 'temple', gallery: ['temple', 'sunrise', 'road', 'hotelLodge'],
+    destinationIds: ['chennai', 'madurai'],
+    summary: 'The six sacred abodes of Lord Murugan — Thiruttani, Swamimalai, Palani, Thirupparankundram, Thiruchendur and Pazhamudircholai — on one well-planned circuit.',
+    overview: 'The Aarupadai Veedu circuit is among the most cherished pilgrimages in Tamil Nadu. We plan the route around darshan timings, comfortable rest stops and elder-friendly logistics, with a driver who has done this circuit many times.',
+    highlights: ['Thiruttani Murugan Temple', 'Swamimalai Swaminatha Swamy Temple', 'Palani Dhandayuthapani Temple', 'Thirupparankundram & Pazhamudircholai', 'Thiruchendur seashore temple'],
+    itinerary: [
+      { day: 1, title: 'Chennai → Thiruttani → Swamimalai', drive: '6.5 h', summary: 'Begin at the first abode and head into the Cauvery delta.', stops: [
+        { kind: 'temple', text: 'Thiruttani Murugan Temple darshan' },
+        { kind: 'temple', text: 'Swamimalai Swaminatha Swamy Temple' },
+        { kind: 'stay', text: 'Overnight in Kumbakonam / Thanjavur' } ] },
+      { day: 2, title: 'Thanjavur → Palani', drive: '5 h', summary: 'On to the hill temple of Palani.', stops: [
+        { kind: 'temple', text: 'Palani Dhandayuthapani Temple (winch / steps)' },
+        { kind: 'stay', text: 'Overnight in Palani' } ] },
+      { day: 3, title: 'Palani → Madurai → Thiruchendur', drive: '6 h', summary: 'Two more abodes before reaching the sea.', stops: [
+        { kind: 'temple', text: 'Thirupparankundram Murugan Temple' },
+        { kind: 'temple', text: 'Pazhamudircholai Murugan Temple' },
+        { kind: 'stay', text: 'Overnight near Thiruchendur' } ] },
+      { day: 4, title: 'Thiruchendur & return', drive: '—', summary: 'Morning darshan at the seashore temple, then the road home.', stops: [
+        { kind: 'temple', text: 'Thiruchendur Subramaniya Swamy Temple' },
+        { kind: 'drive', text: 'Drop at Madurai / Tirunelveli, or return to Chennai (+1 day)' } ] }
+    ],
+    inclusions: ['AC sedan or SUV with experienced route driver', 'Fuel, driver allowance, tolls and parking', '3 nights in clean, temple-side hotels', 'Darshan timing support'],
+    exclusions: ['Meals', 'Special darshan tickets and entry fees', 'Personal expenses and tips'],
+    hotels: [['Kumbakonam', 'Comfort hotel', '3★'], ['Palani', 'Temple-side stay', '3★'], ['Thiruchendur', 'Comfort hotel', '3★']],
+    transport: 'AC sedan or Innova. Suitable for senior travellers.',
+    important: ['Traditional dress code applies at all six temples', 'Palani offers winch and steps; plan for elders accordingly', 'Darshan timings change during festivals'],
+    faqIds: ['f-tour-custom', 'f-tour-hotel', 'f-tour-group', 'f-cancel']
+  },
+  {
+    id: 'evergreen-chennai-pondicherry',
+    title: 'Evergreen Chennai to Pondicherry Tour Package',
+    from: 'Chennai', to: 'Pondicherry', regionFilter: 'Tamil Nadu', priority: 2,
+    days: 2, nights: 1, type: 'Weekend getaway', audience: ['Couple', 'Family', 'Friends'], tier: 'Comfort',
+    price: 11900, priceUnit: 'per vehicle (sedan)', featured: true,
+    image: 'beach', gallery: ['beach', 'coast', 'hotel', 'sunrise'],
+    destinationIds: ['chennai', 'pondicherry'],
+    summary: 'The all-time favourite coastal drive: Mahabalipuram, the French Quarter, Auroville and the promenade — easy, scenic and always in season.',
+    overview: 'Pondicherry never goes out of style. Our evergreen package keeps the drive relaxed and the stops well chosen, with a comfortable stay in the heart of the French Quarter.',
+    highlights: ['Mahabalipuram shore temple', 'French Quarter walk', 'Auroville & Matrimandir', 'Promenade beach evening', 'Paradise Beach (optional)'],
+    itinerary: [
+      { day: 1, title: 'Chennai → Pondicherry', drive: '3.5 h', summary: 'The ECR coast road with the best stops.', stops: [
+        { kind: 'sight', text: 'Mahabalipuram Shore Temple & Five Rathas' },
+        { kind: 'food', text: 'Seafood lunch on the way' },
+        { kind: 'sight', text: 'Promenade beach evening walk' },
+        { kind: 'stay', text: 'Stay in the French Quarter' } ] },
+      { day: 2, title: 'Pondicherry → Chennai', drive: '3.5 h', summary: 'A slow morning and an easy return.', stops: [
+        { kind: 'sight', text: 'Auroville & Matrimandir viewing point' },
+        { kind: 'sight', text: 'Sri Aurobindo Ashram and Manakula Vinayagar Temple' },
+        { kind: 'drive', text: 'Return to Chennai by evening' } ] }
+    ],
+    inclusions: ['AC sedan with driver', 'Fuel, tolls and parking', '1 night stay with breakfast'],
+    exclusions: ['Lunch and dinner', 'Entry fees', 'Personal expenses'],
+    hotels: [['Pondicherry', 'French Quarter stay', '3★/4★']],
+    transport: 'AC sedan with ample luggage space.',
+    important: ['Book 2 weeks ahead for long weekends', 'Beach-side rules vary by zone'],
+    faqIds: ['f-tour-custom', 'f-cancel', 'f-tolls', 'f-advance']
+  },
+  {
     id: 'chennai-kanyakumari',
     title: 'Chennai to Kanyakumari: The Temple Coast',
     from: 'Chennai', to: 'Kanyakumari', regionFilter: 'Tamil Nadu',

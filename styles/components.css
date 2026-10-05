@@ -47,7 +47,7 @@
 .cta-band__inner { display: grid; gap: 2rem; align-items: center; }
 .cta-band .eyebrow { color: var(--ink); } .cta-band .eyebrow::before { background: var(--ink); }
 .cta-band h2 { max-width: 18ch; margin-top: 1rem; font-size: clamp(2rem, 4vw + .5rem, 4rem); }
-.cta-band em { color: var(--ink); font-style: italic; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: rgba(11,13,12,.35); }
+.cta-band em { color: var(--ink); font-style: normal; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: rgba(11,13,12,.35); }
 .cta-band__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 @media (min-width: 960px) { .cta-band__inner { grid-template-columns: 1.3fr 1fr; } .cta-band__actions { justify-content: flex-end; } }
 @media (max-width: 520px) { .cta-band__actions .btn { width: 100%; white-space: normal; } }
