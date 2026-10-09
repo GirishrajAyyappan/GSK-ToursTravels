@@ -79,7 +79,7 @@ GSK.serviceFeature = function (s, flip) {
       '<h2>' + s.title + '</h2><p class="svc-feature__tag">' + s.tagline + '</p>' +
       '<p>' + s.overview + '</p>' +
       '<ul class="tick-list">' + s.who.slice(0, 3).map(function (w) { return '<li>' + w + '</li>'; }).join('') + '</ul>' +
-      '<div class="svc-feature__foot"><p class="price-tag"><small>from</small> ' + s.priceFrom + ' <small>' + s.priceUnit + '</small></p>' +
+      '<div class="svc-feature__foot">' +
       '<div class="svc-feature__btns"><a class="btn btn--accent" href="' + wa + '" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Contact us</a>' +
       '<a class="btn btn--outline-dark" href="' + GSK.link('service', { id: s.id }) + '">Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>' +
     '</div></article>';

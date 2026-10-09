@@ -7,14 +7,14 @@ GSK.pages.services = function () {
 
   var chooser = [
     ['I own a car and need someone to drive it tonight', 'acting-driver'],
-    ['I need a car and a driver for a trip or airport run', 'cab-with-driver'],
-    ['My parents need regular hospital visits', 'senior-care-rides'],
-    ['We’re planning a family or pilgrimage tour', 'tour-packages'],
-    ['Our college is planning an industrial visit', 'student-tours'],
-    ['Our company needs daily employee transport', 'corporate-pickups'],
+    ['I need a taxi for a trip or city ride', 'cab-with-driver'],
+    ['I want to learn to drive', 'driving-class'],
     ['Our hotel, mall or event needs valet parking', 'valet-parking'],
+    ['My parents need regular hospital visits', 'senior-care-rides'],
     ['I need an airport pickup or drop', 'airport-transfers'],
-    ['I want to learn to drive', 'driving-class']
+    ['Our company needs daily employee transport', 'corporate-pickups'],
+    ['We’re planning a family or pilgrimage tour', 'tour-packages'],
+    ['Our college is planning an industrial visit', 'student-tours']
   ];
 
   app.innerHTML =

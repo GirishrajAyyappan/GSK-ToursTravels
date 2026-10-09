@@ -18,7 +18,7 @@ GSK.pages.service = function () {
       eyebrow: s.no + ' — ' + s.tripTypes.join(' · '),
       title: s.title,
       lede: s.tagline + ' ' + s.short,
-      meta: [['From', s.priceFrom + ' ' + s.priceUnit], ['Trip types', s.tripTypes.join(', ')], ['Coverage', 'TN · KL · KA · AP · TG']]
+      meta: [['Trip types', s.tripTypes.join(', ')], ['Coverage', 'TN · KL · KA · AP · TG']]
     }) +
     '<section class="section"><div class="container detail-layout">' +
       '<div class="detail-main">' +
@@ -34,7 +34,7 @@ GSK.pages.service = function () {
           return '<li class="reveal"><span>' + (i + 1) + '</span><h3>' + st[0] + '</h3><p>' + st[1] + '</p></li>';
         }).join('') + '</ol></div>' +
 
-        '<div class="block reveal"><h2>Pricing, plainly</h2><div class="price-note"><p class="price-note__amt"><small>from</small> ' + s.priceFrom + ' <small>' + s.priceUnit + '</small></p><p>' + s.priceNote + ' Final quote is confirmed on WhatsApp before you pay anything.</p></div></div>' +
+        '<div class="block reveal"><h2>Pricing, plainly</h2><div class="price-note"><p class="price-note__amt">Contact us for a quote</p><p>' + s.priceNote + ' Final quote is confirmed on WhatsApp before you pay anything.</p></div></div>' +
 
         (related.length ? '<div class="block"><h2 class="reveal">Popular packages</h2><div class="card-grid card-grid--2">' + related.map(function (t) { return GSK.tourCard(t); }).join('') + '</div></div>' : '') +
 

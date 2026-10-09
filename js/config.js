@@ -41,7 +41,7 @@ GSK.seo = {
   home:        { title: 'GSK Tour & Travels — Call Drivers, Cabs & Tour Packages in South India',
                  description: 'Book verified call drivers for your own car, cabs with drivers, valet parking, airport transfers and tour packages across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh and Telangana.' },
   services:    { title: 'Our Services — Acting Drivers, Cabs, Senior Rides, Corporate | GSK Tour & Travels',
-                 description: 'GSK services: acting drivers, cab with driver, senior care rides, tour packages, student trips, corporate pickups, valet parking, airport transfers and driving classes.' },
+                 description: 'GSK services: acting drivers, taxi, senior care rides, tour packages, student trips, corporate pickups, valet parking, airport transfers and driving classes.' },
   'call-drivers': { title: 'Call Drivers — Tariff for One Way, Round Trip & Outstation | GSK Tour & Travels',
                  description: 'Call driver rates: one way, round trip from ₹550 for 4 hours, outstation same-day return ₹1,550 and outstation day hire ₹1,500 per day.' },
   service:     { title: 'Service | GSK Tour & Travels', description: 'Service details, pricing and how to book.' },

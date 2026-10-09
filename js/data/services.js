@@ -11,7 +11,7 @@ GSK.services = [
     icon: 'fa-id-card',
     image: 'hero',
     tripTypes: ['Single trip', 'Round trip'],
-    priceFrom: '₹300', priceUnit: 'per hour', priceNote: '3-hour minimum. Waiting charged per hour.',
+    priceNote: '3-hour minimum. Waiting charged per hour.',
     overview: 'After a late dinner, a wedding, a long airport run or a day of meetings, you should not have to drive. Book a verified acting driver who arrives in uniform, drives your car as carefully as their own and gets you — and the car — home safely.',
     who: ['Car owners heading to weddings, parties or dinners', 'Airport drop and pick-up runs', 'Long-distance drives where you want to rest', 'Anyone new to a city’s traffic'],
     features: [
@@ -31,13 +31,13 @@ GSK.services = [
   {
     id: 'cab-with-driver',
     no: '02',
-    title: 'Cab + Driver',
+    title: 'Taxi',
     short: 'Clean, well-kept cars with courteous chauffeurs — point to point or by the hour.',
     tagline: 'A proper car, a proper driver.',
     icon: 'fa-car-side',
     image: 'cab',
     tripTypes: ['Single trip', 'Round trip', 'Hourly rental'],
-    priceFrom: '₹13', priceUnit: 'per km', priceNote: 'Sedan rate. SUV and premium MPV on request. Tolls and parking extra.',
+    priceNote: 'Sedan rate. SUV and premium MPV on request. Tolls and parking extra.',
     overview: 'Think of the convenience of an app cab, with the accountability of a company that knows your driver by name. Sedans, SUVs and MPVs for airport transfers, city hops, hourly rentals and outstation trips.',
     who: ['Airport and railway transfers', 'Family outstation trips', 'Hourly city use for errands and meetings', 'Visitors who want one driver for the whole stay'],
     features: [
@@ -63,7 +63,7 @@ GSK.services = [
     icon: 'fa-heart-pulse',
     image: 'senior',
     tripTypes: ['Single trip', 'Round trip', 'Monthly package'],
-    priceFrom: '₹9,500', priceUnit: 'per month', priceNote: 'Indicative monthly package (driver alone, up to 8 hospital trips). Car + driver packages on request.',
+    priceNote: 'Indicative monthly package (driver alone, up to 8 hospital trips). Car + driver packages on request.',
     overview: 'When you live abroad or in another city, one worry stays with you: “Who will take Amma and Appa to the hospital?” Our senior care packages pair your parents with the same patient, trained driver every time — on a schedule you set, with updates sent straight to you.',
     who: ['Families with parents living alone in Tamil Nadu, Kerala, Karnataka, AP or Telangana', 'Regular dialysis, physiotherapy or check-up visits', 'Temple visits, banking and family errands', 'NRI children who want peace of mind'],
     features: [
@@ -89,7 +89,7 @@ GSK.services = [
     icon: 'fa-route',
     image: 'temple',
     tripTypes: ['Round trip', 'One-way circuit'],
-    priceFrom: '₹14,500', priceUnit: 'per vehicle', priceNote: 'Indicative, for a sedan on a 2-night package. Hotels and meals itemised per package.',
+    priceNote: 'Indicative, for a sedan on a 2-night package. Hotels and meals itemised per package.',
     overview: 'Planning a trip from Chennai to Kanyakumari? Kerala backwaters? Coorg from Bangalore? We send a chauffeur who has driven the route dozens of times — and who knows which temple to visit before noon, which restaurant serves the best meal and which hotel is actually worth the money.',
     who: ['Families and multi-generation groups', 'Couples and honeymooners', 'Temple and pilgrimage circuits', 'Small groups up to 12 travelling together'],
     features: [
@@ -115,7 +115,7 @@ GSK.services = [
     icon: 'fa-graduation-cap',
     image: 'students',
     tripTypes: ['Single trip', 'Round trip'],
-    priceFrom: '₹1,850', priceUnit: 'per student', priceNote: 'Indicative, for groups of 30+ on a day trip with coach. Stay packages priced per itinerary.',
+    priceNote: 'Indicative, for groups of 30+ on a day trip with coach. Stay packages priced per itinerary.',
     overview: 'A good industrial visit is organised, safe and memorable. We work with schools and colleges to plan coach travel, nearby sightseeing, food and stays — with experienced drivers, first-aid kits and a coordinator on every trip.',
     who: ['Schools and colleges planning IVs and study tours', 'Department-wise engineering and management trips', 'Sports teams and cultural groups', 'Clubs and youth organisations'],
     features: [
@@ -141,7 +141,7 @@ GSK.services = [
     icon: 'fa-building',
     image: 'corporate',
     tripTypes: ['Single trip', 'Round trip', 'Monthly contract'],
-    priceFrom: 'Custom', priceUnit: 'monthly contracts', priceNote: 'Priced per route, vehicle type and shift pattern. Request a proposal.',
+    priceNote: 'Priced per route, vehicle type and shift pattern. Request a proposal.',
     overview: 'Reliable office commutes are a quiet productivity advantage. We run fixed-route and shift-based pickups for teams and leadership, with dedicated drivers, back-up vehicles and monthly invoicing.',
     who: ['IT parks and offices with shift timings', 'Leadership and guest transport', 'Night-shift drops with safety protocols', 'Company events and offsites'],
     features: [
@@ -167,7 +167,7 @@ GSK.services = [
     icon: 'fa-square-parking',
     image: 'hotel',
     tripTypes: ['Event', 'Daily contract'],
-    priceFrom: 'Custom', priceUnit: 'per event or contract', priceNote: 'B2B: priced per site, shift and headcount. B2C: priced per event and number of cars.',
+    priceNote: 'B2B: priced per site, shift and headcount. B2C: priced per event and number of cars.',
     overview: 'Whether it is a hotel porch, a restaurant, a mall, a corporate event or a family wedding at home, our uniformed valet staff handle arrival, parking and return with care. Businesses (B2B) get dependable daily or event teams; individuals (B2C) get a smooth guest experience for functions and parties.',
     who: ['Hotels, restaurants, malls and hospitals (B2B)', 'Corporate events and conferences (B2B)', 'Weddings, receptions and house functions (B2C)', 'Residential communities hosting gatherings (B2C)'],
     features: [
@@ -193,7 +193,7 @@ GSK.services = [
     icon: 'fa-plane-departure',
     image: 'traveller',
     tripTypes: ['Pickup', 'Drop', 'Round trip'],
-    priceFrom: 'Custom', priceUnit: 'fixed fare by route', priceNote: 'Fixed fare by pickup area and vehicle. Waiting charges listed upfront.',
+    priceNote: 'Fixed fare by pickup area and vehicle. Waiting charges listed upfront.',
     overview: 'Early flights, late landings, heavy luggage — we make the airport run simple. Your driver tracks the flight, waits at arrivals with a name board and gets you to your door, or gets you to the terminal with time to spare.',
     who: ['Families and seniors with luggage', 'Business travellers on tight schedules', 'Early-morning and late-night flights', 'Visitors arriving in a new city'],
     features: [
@@ -219,7 +219,7 @@ GSK.services = [
     icon: 'fa-chalkboard-user',
     image: 'cab',
     tripTypes: ['Beginner', 'Refresher'],
-    priceFrom: 'Custom', priceUnit: 'per course', priceNote: 'Course fee depends on number of sessions and whether you use your car or ours.',
+    priceNote: 'Course fee depends on number of sessions and whether you use your car or ours.',
     overview: 'Nervous about city traffic? Our experienced instructors teach from the very basics — controls, clutch and gears, parking, turns and traffic sense — one-to-one at a pace that suits you, in manual or automatic cars.',
     who: ['First-time learners and adults who never learned', 'Licence holders who have lost confidence', 'Women and seniors who prefer a patient instructor', 'Families who want a trained instructor for a new car'],
     features: [
@@ -237,6 +237,14 @@ GSK.services = [
     faqIds: ['f-advance', 'f-cancel', 'f-vehicle', 'f-hours']
   }
 ];
+
+/* Display order on the home page, services page and footer; numbering follows it. */
+GSK.services = ['acting-driver', 'cab-with-driver', 'driving-class', 'valet-parking', 'senior-care-rides', 'airport-transfers', 'corporate-pickups', 'tour-packages', 'student-tours']
+  .map(function (id, i) {
+    var s = GSK.services.find(function (x) { return x.id === id; });
+    s.no = String(i + 1).padStart(2, '0');
+    return s;
+  });
 
 GSK.getService = function (id) {
   return GSK.services.find(function (s) { return s.id === id; });

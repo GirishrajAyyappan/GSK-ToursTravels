@@ -20,7 +20,7 @@ GSK.bookingForm = function (o) {
       '<div class="field booking__row-2"><div class="field"><label for="' + p + 'date">Pickup date</label><input id="' + p + 'date" name="date" type="date" required></div>' +
         '<div class="field"><label for="' + p + 'time">Pickup time</label><input id="' + p + 'time" name="time" type="time" required></div></div>' +
       '<div class="field" data-for="round" hidden><label for="' + p + 'hrs">Hours needed</label><select id="' + p + 'hrs" name="hours">' +
-        [4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (h) { return '<option value="' + h + '">' + h + ' hours</option>'; }).join('') + '</select></div>' +
+        [2, 4, 6, 8, 10, 12].map(function (h) { return '<option value="' + h + '">' + h + ' hours</option>'; }).join('') + '</select></div>' +
       '<div class="field" data-for="days" hidden><label for="' + p + 'days">Number of days</label><select id="' + p + 'days" name="days">' +
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 30].map(function (d) { return '<option value="' + d + '">' + d + (d === 1 ? ' day' : ' days') + '</option>'; }).join('') + '</select></div>' +
     '</div>' +
@@ -31,19 +31,9 @@ GSK.bookingForm = function (o) {
   '</form>';
 };
 
-GSK.estimate = function (tripId, v) {
-  var t = GSK.getTariff(tripId);
-  if (tripId === 'oneway') return 'Approx. 75 minutes · fare confirmed on WhatsApp';
-  if (tripId === 'round') {
-    var h = parseInt(v.hours || t.baseHours, 10), extra = Math.max(0, h - t.baseHours);
-    return 'Estimate: ' + GSK.price(t.base + extra * t.extraPerHour) + ' for ' + h + ' hours' + (extra ? ' (₹550 + ' + extra + ' × ₹100)' : '');
-  }
-  if (tripId === 'sameday') {
-    var night = v.time && (v.time >= '22:00' || v.time < '06:00');
-    return 'Estimate: ' + GSK.price(t.base + (night ? t.night : 0)) + ' for 12 hours' + (night ? ' (incl. ₹100 night charge)' : ' · +₹100 if travelling 10 PM – 6 AM');
-  }
-  var d = parseInt(v.days || 1, 10);
-  return 'Estimate: ' + GSK.price(d * t.perDay) + ' for ' + d + (d === 1 ? ' day' : ' days') + ' (₹1,500 per day)';
+GSK.estimate = function (tripId) {
+  var msg = 'Contact us for estimated price';
+  return tripId === 'sameday' ? msg + '. Additional charges apply if travelling from 10 PM to 6 AM' : msg;
 };
 
 GSK.bindBooking = function (form) {
@@ -61,7 +51,7 @@ GSK.bindBooking = function (form) {
     GSK.$$('.booking__tab', form).forEach(function (b) {
       var on = b.dataset.trip === trip; b.classList.toggle('is-active', on); b.setAttribute('aria-selected', on);
     });
-    est.textContent = GSK.estimate(trip, values());
+    est.textContent = GSK.estimate(trip);
   }
   GSK.$('.booking__tabs', form).addEventListener('click', function (e) {
     var b = e.target.closest('.booking__tab'); if (!b) return;
@@ -84,7 +74,6 @@ GSK.bindBooking = function (form) {
       'Date: ' + f.date.value + ' at ' + f.time.value];
     if (trip === 'round') lines.push('Hours: ' + v.hours);
     if (trip === 'days') lines.push('Days: ' + v.days);
-    lines.push(GSK.estimate(trip, v));
     window.open(GSK.waLink(lines.join('\n')), '_blank', 'noopener');
   });
   refresh();
